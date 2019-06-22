@@ -1,0 +1,23 @@
+[gd_scene format=2]
+
+[node name="lvl" type="Node2D"]
+
+[node name="train" type="Node2D" parent="."]
+
+[node name="under" type="TileMap" parent="train"]
+format = 1
+
+[node name="floor" type="TileMap" parent="train"]
+format = 1
+
+[node name="??" type="TileMap" parent="train"]
+format = 1
+
+[node name="??2" type="TileMap" parent="train"]
+format = 1
+
+[node name="??3" type="TileMap" parent="train"]
+format = 1
+
+[node name="??4" type="TileMap" parent="train"]
+format = 1
