@@ -20,5 +20,5 @@ Traincar Generation : Started
 ### The Art
 All the pixel art is made by the fairer side of the team, AemiG. Here's a sample of some art she's prepared while Zaya works on the programming.
 
->![Owl](https://i.imgur.com/muA0BBx.png)![bench](https://i.imgur.com/XJwS980.png)![spear](https://i.imgur.com/kJZRMNu.png)![Crossbow](https://i.imgur.com/nVglFto.png)
+>![Crow](https://i.imgur.com/syZu82M.png)![Owl](https://i.imgur.com/muA0BBx.png)![bench](https://i.imgur.com/XJwS980.png)![spear](https://i.imgur.com/kJZRMNu.png)![Crossbow](https://i.imgur.com/nVglFto.png)
 
