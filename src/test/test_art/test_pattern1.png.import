@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/test_pattern1.png-4f9c7215be1b942fd21f130555d0303e.image"
+
+[deps]
+
+source_file="res://src/test/test_art/test_pattern1.png"
+dest_files=[ "res://.import/test_pattern1.png-4f9c7215be1b942fd21f130555d0303e.image" ]
+
+[params]
+

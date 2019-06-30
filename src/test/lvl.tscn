@@ -1,14 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/test/train.gd" type="Script" id=1]
+[ext_resource path="res://src/test/test_art/lvl.tres" type="TileSet" id=2]
+[ext_resource path="res://src/test/tilelayer.gd" type="Script" id=3]
+[ext_resource path="res://src/test/ControlCam.gd" type="Script" id=4]
+[ext_resource path="res://src/test/test_art/light.png" type="Texture" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=1]
 
 [node name="lvl" type="Node2D"]
 
 [node name="train" type="Node2D" parent="."]
+script = ExtResource( 1 )
 
 [node name="under" type="TileMap" parent="train"]
+tile_set = ExtResource( 2 )
 format = 1
 
 [node name="floor" type="TileMap" parent="train"]
+tile_set = ExtResource( 2 )
 format = 1
+script = ExtResource( 3 )
+defaultTiles = [ 0, 2 ]
 
 [node name="??" type="TileMap" parent="train"]
 format = 1
@@ -21,3 +34,14 @@ format = 1
 
 [node name="??4" type="TileMap" parent="train"]
 format = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 3.10577, 17.0946 )
+current = true
+zoom = Vector2( 0.66, 1 )
+script = ExtResource( 4 )
+
+[node name="guide" type="Sprite" parent="."]
+material = SubResource( 1 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 5 )

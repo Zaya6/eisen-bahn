@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/test_pattern2.png-6265ab3214957b5db951c76e52b3a16a.image"
+
+[deps]
+
+source_file="res://src/test/test_art/test_pattern2.png"
+dest_files=[ "res://.import/test_pattern2.png-6265ab3214957b5db951c76e52b3a16a.image" ]
+
+[params]
+
