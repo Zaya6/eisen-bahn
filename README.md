@@ -14,4 +14,5 @@ Pixel Matching Generation is very easy to use and needs no advanced match skills
 Traincar Generation : Started
 
 >![Traincar Generation](https://media.giphy.com/media/cICpBXJuJ7NMm5hIeh/giphy.gif)
+
 >*Generating a map to place tiles. Each color will represent a tile from a tileset.*
