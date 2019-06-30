@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/stamp_4.png-66175eb5fcd6746ee1c61e1d61ef103b.image"
+
+[deps]
+
+source_file="res://src/test/test_art/stamp_4.png"
+dest_files=[ "res://.import/stamp_4.png-66175eb5fcd6746ee1c61e1d61ef103b.image" ]
+
+[params]
+

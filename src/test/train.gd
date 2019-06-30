@@ -1,31 +1,41 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
-	_make_layout()
-	pass
+	$"../guide".set_texture(draw_frame(100, 100))
+#	var pattern = $"/root/TrainGen".make_train_pattern()
+#	$"../guide".texture = pattern.get_texture()
 	
-func _process(delta):
-	if Input.is_action_just_pressed("ui_accept"):
-		_make_layout()
-	
-func _make_layout():
-	var grid = _make_floor_layout()
-	var defaults = grid.defaultTiles
-	var cells = grid.get_used_cells()
-	for pos in cells:
-		grid.set_cellv(pos,_rand_tile(defaults))
 	pass
 
-func _make_floor_layout():
-	return $floor
-	pass
+#func _process(delta):
+#	if Input.is_action_just_pressed("ui_accept"):
+#		var pattern = $"/root/TrainGen".make_train_pattern()
+#		$"../guide".texture = pattern.get_texture()
 
-func _rand_tile(defaults):
-	return defaults[randi() % defaults.size()]
-#	var tom = Array().count(
+
+func draw_frame(width=256, height=256):
+	var img = Image.new()
+	img.create(width, height, false, Image.FORMAT_RGB8)
+	
+	var px = 0
+	var py = 0
+	var mask = Rect2( 1,1,width-2,height-2)
+	img.lock()
+	
+	while py < height:
+		while px < width:
+			if not mask.has_point(Vector2(px, py)):
+				img.set_pixel(px, py, Color(0.5,0.8,0.5,0))
+			px += 1
+		px = 0
+		py+=1
+	
+	img.unlock()
+	
+	var tex = ImageTexture.new()
+	tex.create_from_image(img)
+	tex.set_flags(2)
+	return tex
+	
