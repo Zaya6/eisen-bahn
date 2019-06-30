@@ -8,9 +8,10 @@ Eisen Bahn is a project made by a husband and wife team to complete an entire ro
 ### The Current State
 Pixel Matching Generation is very easy to use and needs no advanced match skills to learn. One could probably program one in 80 lines of code or less and uses only standard loops and if statements. And because generation happens with textures there should be many ways to optimize it further.
 
-![Generation Test](https://media.giphy.com/media/Tia50ot3NZejXavPNP/giphy.gif)
+>![Generation Test](https://media.giphy.com/media/Tia50ot3NZejXavPNP/giphy.gif)
 
 
 Traincar Generation : Started
 
-![Traincar Generation](https://media.giphy.com/media/cICpBXJuJ7NMm5hIeh/giphy.gif)
+>![Traincar Generation](https://media.giphy.com/media/cICpBXJuJ7NMm5hIeh/giphy.gif)
+>*Generating a map to place tiles. Each color will represent a tile from a tileset.*
