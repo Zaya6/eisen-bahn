@@ -19,10 +19,6 @@ config/name="IniTrain"
 run/main_scene="res://src/test/lvl.tscn"
 config/icon="res://icon.png"
 
-[display]
-
-window/size/height=800
-
 [rendering]
 
 environment/default_environment="res://default_env.tres"
