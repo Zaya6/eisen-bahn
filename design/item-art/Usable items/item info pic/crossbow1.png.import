@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD
 path="res://.import/crossbow1.png-a4add5b983a222da50946423938f13c0.stex"
+=======
+path="res://.import/crossbow1.png-7cf52cfe6319cae65df9d3f55523d350.stex"
+>>>>>>> Pixl-art
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://design/item-art/Usable items/item info pic/crossbow1.png"
 dest_files=[ "res://.import/crossbow1.png-a4add5b983a222da50946423938f13c0.stex" ]
+=======
+source_file="res://design/item-art/crossbow1.png"
+dest_files=[ "res://.import/crossbow1.png-7cf52cfe6319cae65df9d3f55523d350.stex" ]
+>>>>>>> Pixl-art
 
 [params]
 
