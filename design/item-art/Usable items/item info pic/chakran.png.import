@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD
 path="res://.import/chakran.png-dc43e01b3f14a2267a251188f08ba27d.stex"
+=======
+path="res://.import/chakran.png-f5643d44703f994a40fb7a190121c4fd.stex"
+>>>>>>> Pixl-art
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://design/item-art/Usable items/item info pic/chakran.png"
 dest_files=[ "res://.import/chakran.png-dc43e01b3f14a2267a251188f08ba27d.stex" ]
+=======
+source_file="res://design/item-art/chakran.png"
+dest_files=[ "res://.import/chakran.png-f5643d44703f994a40fb7a190121c4fd.stex" ]
+>>>>>>> Pixl-art
 
 [params]
 

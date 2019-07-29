@@ -1,0 +1,65 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/test/stamping_0.3.gd" type="Script" id=1]
+[ext_resource path="res://src/test/test_art/stamp_1.png" type="Image" id=2]
+[ext_resource path="res://src/test/test_art/stamp_2.png" type="Image" id=3]
+[ext_resource path="res://src/test/test_art/stamp_3.png" type="Image" id=4]
+[ext_resource path="res://src/test/test_art/stamp_4.png" type="Image" id=5]
+[ext_resource path="res://src/test/test_art/stamp_5.png" type="Image" id=6]
+[ext_resource path="res://src/test/test_art/stamp_6.png" type="Image" id=7]
+[ext_resource path="res://src/test/test_art/stamp_7.png" type="Image" id=8]
+[ext_resource path="res://src/test/test_art/stamp_8.png" type="Image" id=9]
+[ext_resource path="res://src/test/test_art/stamp_9.png" type="Image" id=10]
+[ext_resource path="res://src/test/test_art/stamp_10.png" type="Image" id=11]
+[ext_resource path="res://src/test/test_art/stamp_11.png" type="Image" id=12]
+[ext_resource path="res://src/test/test_art/stamp_12.png" type="Image" id=13]
+[ext_resource path="res://src/test/test_art/stamp_13.png" type="Image" id=14]
+[ext_resource path="res://src/test/test_art/stamp_14.png" type="Image" id=15]
+[ext_resource path="res://src/test/test_art/stamp_15.png" type="Image" id=16]
+[ext_resource path="res://src/test/test_art/stamp_16.png" type="Image" id=17]
+[ext_resource path="res://src/test/test_art/stamp_17.png" type="Image" id=18]
+[ext_resource path="res://src/test/test_art/stamp_18.png" type="Image" id=19]
+[ext_resource path="res://src/test/test_art/stamp_19.png" type="Image" id=20]
+[ext_resource path="res://src/test/test_art/stamp_20.png" type="Image" id=21]
+[ext_resource path="res://src/test/test_art/stamp_4.1.png" type="Image" id=22]
+[ext_resource path="res://src/test/test_art/stamp_5.1.png" type="Image" id=23]
+[ext_resource path="res://src/test/test_art/stamp_21.a.png" type="Image" id=24]
+[ext_resource path="res://src/test/test_art/stamp_21.png" type="Image" id=25]
+[ext_resource path="res://src/test/test_art/stamp_21.b.png" type="Image" id=26]
+[ext_resource path="res://src/test/test_art/stamp_21.c.png" type="Image" id=27]
+[ext_resource path="res://src/test/test_art/stamp_22.png" type="Image" id=28]
+[ext_resource path="res://src/test/test_art/Title.png" type="Texture" id=29]
+[ext_resource path="res://src/test/test_art/test_pattern3.png" type="Texture" id=30]
+[ext_resource path="res://src/test/ControlCam.gd" type="Script" id=31]
+
+[node name="stamping_03" type="Node"]
+script = ExtResource( 1 )
+stamp_paths = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="interface" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Container" type="Control" parent="CanvasLayer/interface"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/interface/Container"]
+margin_right = 328.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+texture = ExtResource( 29 )
+expand = true
+stretch_mode = 5
+
+[node name="pattern" type="Sprite" parent="."]
+position = Vector2( 521.082, 419.973 )
+scale = Vector2( 4.79964, 4.79964 )
+texture = ExtResource( 30 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512.637, 401.907 )
+current = true
+script = ExtResource( 31 )

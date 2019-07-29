@@ -1,7 +1,7 @@
 extends Camera2D
 
 var nzoom = 1
-var zoomTarget = 1
+var zoomTarget = 10
 var move = Vector2(0.0, 0.0)
 
 # Called when the node enters the scene tree for the first time.

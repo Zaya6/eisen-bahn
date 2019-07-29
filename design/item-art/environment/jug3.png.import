@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD
 path="res://.import/jug3.png-ef4c0182fc2ef620d967a2820c5946eb.stex"
+=======
+path="res://.import/jug3.png-be5381215ad39d49784ba90e97ff6154.stex"
+>>>>>>> Pixl-art
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
 source_file="res://design/item-art/environment/jug3.png"
 dest_files=[ "res://.import/jug3.png-ef4c0182fc2ef620d967a2820c5946eb.stex" ]
+=======
+source_file="res://design/item-art/jug3.png"
+dest_files=[ "res://.import/jug3.png-be5381215ad39d49784ba90e97ff6154.stex" ]
+>>>>>>> Pixl-art
 
 [params]
 
