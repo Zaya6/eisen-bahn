@@ -1,38 +1,18 @@
 extends Node
 
+# static vars to keep consistency in generation
 var _last_pos = Vector2(0,0)
 var _last_successful_pos = Vector2(0,0)
 
-var stamp_library = []
+var stampLibraries = {}
 
 func _init():
-	stamp_library = process_stamps(get_stamp_paths())
+	pass
+	#set up here to automatically load libraries at load
 
-func process_stamps(imgs):
-	var library = []
-	for img_path in imgs:
-		var img = load(img_path).get_data()
-		img.convert(Image.FORMAT_RGBA8)
-		img.lock();var tag = img.get_pixel(0,img.get_height()-1);img.unlock()
-#		print(img_path)
-		
-		#organize stamps into groups based on color tags in bottom left corner
-		var group_found = false
-		for group in library:
-			if group[0].tag == tag:
-				group.append(Stamp.new(img))
-				group_found = true
-		
-		#if a color group doesn't already exist, make a new one
-		if not group_found:
-			library.append([Stamp.new(img)])
-			
-	return library
-
-func get_stamp_paths(path="res://src/stamps/"):
+func loadStampLibrary(path="res://src/stamps/"):
 	var dir = Directory.new()
-	var stamps = []
-	var directories = []
+	var libraries = {}
 	dir.open(path)
 	dir.list_dir_begin()
 
@@ -41,24 +21,24 @@ func get_stamp_paths(path="res://src/stamps/"):
 		var file = dir.get_next()
 		if file == "":
 			break
-		elif not file.begins_with("."):
-			if dir.current_is_dir():
-				directories.append(file)
-			else:
-				if file.ends_with(".png"):
-					stamps.append(path + file)
-	#go through directories
-	for d in directories:
-		stamps = stamps + get_stamp_paths(path + d + "/")
-	
+		if file.ends_with(".json"):
+			var name = file
+			name.erase(name.length()-5,name.length())
+			processStampLibrary(name, path+file)
 	dir.list_dir_end()
-	return stamps
+	print(stampLibraries)
+	
 
-func get_stamps_by_tag(tag=Color(1,1,1,1)):
-	for group in stamp_library:
-		if group[0].tag == tag:
-			return group
-	return stamp_library[0]
+func processStampLibrary(name, path):
+	#load and parse json file into dictionary
+	var library = {}
+	var file = File.new()
+	file.open(path, file.READ)
+	library = parse_json(file.get_as_text())
+	file.close()
+		
+	stampLibraries[name] = library
+		
 
 class Stamp:
 	var _key = []
