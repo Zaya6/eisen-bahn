@@ -28,10 +28,6 @@ Stamps="*res://src/Stamps.gd"
 PMG="*res://PMG.gd"
 Patterns="*res://src/Patterns.gd"
 
-[debug]
-
-settings/fps/force_fps=60
-
 [display]
 
 window/size/height=800

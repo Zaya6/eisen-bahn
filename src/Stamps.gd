@@ -6,9 +6,9 @@ var _last_successful_pos = Vector2(0,0)
 
 var stampLibraries = {}
 
+#start loading libraries at start
 func _init():
-	pass
-	#set up here to automatically load libraries at load
+	loadStampLibrary()
 
 func loadStampLibrary(path="res://src/stamps/"):
 	var dir = Directory.new()
@@ -26,7 +26,6 @@ func loadStampLibrary(path="res://src/stamps/"):
 			name.erase(name.length()-5,name.length())
 			processStampLibrary(name, path+file)
 	dir.list_dir_end()
-	print(stampLibraries)
 	
 
 func processStampLibrary(name, path):
@@ -36,7 +35,7 @@ func processStampLibrary(name, path):
 	file.open(path, file.READ)
 	library = parse_json(file.get_as_text())
 	file.close()
-		
+	#save library under name
 	stampLibraries[name] = library
 		
 
