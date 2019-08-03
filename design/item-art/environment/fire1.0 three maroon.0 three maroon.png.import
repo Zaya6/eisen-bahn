@@ -2,15 +2,24 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< HEAD
+path="res://.import/fire1.0 three maroon.0 three maroon.png-1ce82ca8861392ccbb9e42fcb2a055c8.stex"
+=======
 path="res://.import/fire1.0 three maroon.0 three maroon.png-9581c85d9f39aebb4aa7807bbe326451.stex"
+>>>>>>> Pixl-art
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< HEAD
+source_file="res://design/item-art/environment/fire1.0 three maroon.0 three maroon.png"
+dest_files=[ "res://.import/fire1.0 three maroon.0 three maroon.png-1ce82ca8861392ccbb9e42fcb2a055c8.stex" ]
+=======
 source_file="res://design/item-art/fire1.0 three maroon.0 three maroon.png"
 dest_files=[ "res://.import/fire1.0 three maroon.0 three maroon.png-9581c85d9f39aebb4aa7807bbe326451.stex" ]
+>>>>>>> Pixl-art
 
 [params]
 

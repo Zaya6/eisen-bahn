@@ -11,18 +11,18 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("ui_page_up"):
-		zoomTarget +=0.1
+		zoomTarget -=0.05
 	if Input.is_action_pressed("ui_page_down"):
-		zoomTarget -=0.1
+		zoomTarget +=0.05
 	
 	if Input.is_action_pressed("ui_up"):
-		move.y -= 50 * delta
+		move.y -= int(50 * delta)
 	if Input.is_action_pressed("ui_down"):
-		move.y += 50 * delta
+		move.y += int(50 * delta)
 	if Input.is_action_pressed("ui_right"):
-		move.x += 50 * delta
+		move.x += int(50 * delta)
 	if Input.is_action_pressed("ui_left"):
-		move.x -= 50 * delta
+		move.x -= int(50 * delta)
 	
 	offset += move
 	move *= 0.9

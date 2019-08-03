@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/stamp_9.png-2f04b1260a601513939a07163e25dcf8.image"
+
+[deps]
+
+source_file="res://src/test/test_art/stamp_9.png"
+dest_files=[ "res://.import/stamp_9.png-2f04b1260a601513939a07163e25dcf8.image" ]
+
+[params]
+

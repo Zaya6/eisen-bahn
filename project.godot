@@ -15,10 +15,29 @@ _global_script_class_icons={
 
 [application]
 
-config/name="IniTrain"
-run/main_scene="res://src/test/lvl.tscn"
+config/name="Eisen Bahn"
+run/main_scene="res://src/scenes/Editor.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
+
+[autoload]
+
+Tiles="*res://src/Tiles.gd"
+TrainGen="*res://src/TrainGen.gd"
+Stamps="*res://src/Stamps.gd"
+PMG="*res://PMG.gd"
+Patterns="*res://src/Patterns.gd"
+
+[debug]
+
+settings/fps/force_fps=60
+
+[display]
+
+window/size/height=800
 
 [rendering]
 
+quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0.168627, 0.0117647, 0.00784314, 1 )
 environment/default_environment="res://default_env.tres"

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/crow.png-2e821fec4e76ffbd6a9eb216b5683aa6.stex"
+path="res://.import/crow.png-8416034705d79be9d3ea6feac18718db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/crow.png"
-dest_files=[ "res://.import/crow.png-2e821fec4e76ffbd6a9eb216b5683aa6.stex" ]
+source_file="res://design/item-art/AI.NPC/crow.png"
+dest_files=[ "res://.import/crow.png-8416034705d79be9d3ea6feac18718db.stex" ]
 
 [params]
 
