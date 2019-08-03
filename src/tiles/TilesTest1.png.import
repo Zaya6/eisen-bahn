@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stamp_3.png-1715a29619c77b1c0bd3d304f4c54a2f.stex"
+path="res://.import/TilesTest1.png-ad5a0e1a021a0479e8bc8bcb1cce48cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/stamps/dungeon_v2/stamp_3.png"
-dest_files=[ "res://.import/stamp_3.png-1715a29619c77b1c0bd3d304f4c54a2f.stex" ]
+source_file="res://src/tiles/TilesTest1.png"
+dest_files=[ "res://.import/TilesTest1.png-ad5a0e1a021a0479e8bc8bcb1cce48cf.stex" ]
 
 [params]
 
