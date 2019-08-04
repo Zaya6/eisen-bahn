@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LL arm.png-e7d94ddc0559150169989b59cbae7e3e.stex"
+path="res://.import/LL arm.png-7e339511e13ea313762ca299b4c54e4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts RAW/LL arm.png"
-dest_files=[ "res://.import/LL arm.png-e7d94ddc0559150169989b59cbae7e3e.stex" ]
+source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/LL arm.png"
+dest_files=[ "res://.import/LL arm.png-7e339511e13ea313762ca299b4c54e4f.stex" ]
 
 [params]
 
