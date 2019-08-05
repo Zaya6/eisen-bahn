@@ -7,40 +7,141 @@
         ],
          "stamp":[
             -1,-1,-1,
-            -1,0,-1,
+            -1,1,-1,
             -1,-1,-1
         ],
 		"size":3,
 		"ranStart":true,
+		"matchSuccess":0.5,
 		"limit": 3
 		
     },
-    "path1": {
+    "sproutR": {
         "pattern": [
            -1,-1,-1,
-            -1,0,-1,
+            -1,1,-1,
             -1,-1,-1
         ],
          "stamp":[
            -1,-1,-1,
-            -1,0,0,
+            -1,1,1,
             -1,-1,-1
         ],
         "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
 		"size":3
     },
-	"path2": {
+	"sproutL": {
         "pattern": [
            -1,-1,-1,
-            0,0,-1,
+            -1,1,-1,
             -1,-1,-1
         ],
          "stamp":[
            -1,-1,-1,
-            0,0,-1,
-            -1,-1,0
+            1,1,-1,
+            -1,-1,-1
         ],
         "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
+		"size":3
+    },
+	"sproutU": {
+        "pattern": [
+           -1,-1,-1,
+            -1,1,-1,
+            -1,-1,-1
+        ],
+         "stamp":[
+           -1,1,-1,
+            -1,1,-1,
+            -1,-1,-1
+        ],
+        "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
+		"size":3
+    },
+	"sproutD": {
+        "pattern": [
+           -1,-1,-1,
+            -1,1,-1,
+            -1,-1,-1
+        ],
+         "stamp":[
+           -1,-1,-1,
+            -1,1,-1,
+            -1,1,-1
+        ],
+        "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
+		"size":3
+    },
+	"pathR": {
+        "pattern": [
+           -1,-1,-1,
+            1,1,-1,
+            -1,-1,-1
+        ],
+         "stamp":[
+           -1,-1,-1,
+            1,1,1,
+            -1,-1,-1
+        ],
+        "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
+		"size":3
+    },
+	"pathL": {
+        "pattern": [
+           -1,-1,-1,
+            -1,1,1,
+            -1,-1,-1
+        ],
+         "stamp":[
+           -1,-1,-1,
+            1,1,1,
+            -1,-1,-1
+        ],
+        "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
+		"size":3
+    },
+	"pathU": {
+        "pattern": [
+           -1,-1,-1,
+            -1,1,-1,
+            -1,1,-1
+        ],
+         "stamp":[
+           -1,1,-1,
+            -1,1,-1,
+            -1,1,-1
+        ],
+        "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
+		"size":3
+    },
+	"pathD": {
+        "pattern": [
+           -1,1,-1,
+            -1,1,-1,
+            -1,-1,-1
+        ],
+         "stamp":[
+           -1,1,-1,
+            -1,1,-1,
+            -1,1,-1
+        ],
+        "rotation":true,
+		"matchSuccess":0.3,
+		"ranStart":false,
 		"size":3
     }
 }

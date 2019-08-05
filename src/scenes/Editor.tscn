@@ -184,10 +184,10 @@ margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 
 [node name="Map" type="TextureRect" parent="CanvasLayer/MapPanel"]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 76.0
-margin_bottom = 76.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 73.0
+margin_bottom = 73.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.0
