@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Neck.png-5e2e2257de89a6d504ff455f82ced78e.stex"
+path="res://.import/Neck.png-4936d397e521b6e2813bfc9113f24ded.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts RAW/Neck.png"
-dest_files=[ "res://.import/Neck.png-5e2e2257de89a6d504ff455f82ced78e.stex" ]
+source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/Neck.png"
+dest_files=[ "res://.import/Neck.png-4936d397e521b6e2813bfc9113f24ded.stex" ]
 
 [params]
 

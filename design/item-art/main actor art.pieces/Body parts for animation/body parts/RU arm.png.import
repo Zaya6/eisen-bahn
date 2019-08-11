@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RU arm.png-bc7f06a814633e51dd353067edca0448.stex"
+path="res://.import/RU arm.png-71915c4c575e3226f03aecc192d8b2ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts RAW/RU arm.png"
-dest_files=[ "res://.import/RU arm.png-bc7f06a814633e51dd353067edca0448.stex" ]
+source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/RU arm.png"
+dest_files=[ "res://.import/RU arm.png-71915c4c575e3226f03aecc192d8b2ae.stex" ]
 
 [params]
 

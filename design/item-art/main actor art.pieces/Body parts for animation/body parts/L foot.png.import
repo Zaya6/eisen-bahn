@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/L foot.png-3666a7e5da7513b390baec7f13fdaef6.stex"
+path="res://.import/L foot.png-79a8df810c07df502d8a4cc91bc9f177.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts RAW/L foot.png"
-dest_files=[ "res://.import/L foot.png-3666a7e5da7513b390baec7f13fdaef6.stex" ]
+source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/L foot.png"
+dest_files=[ "res://.import/L foot.png-79a8df810c07df502d8a4cc91bc9f177.stex" ]
 
 [params]
 
