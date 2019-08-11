@@ -23,6 +23,7 @@ func loadStampLibrary(path="res://src/stamps/"):
 			break
 		if file.ends_with(".json"):
 			var name = file
+			print(name)
 			name.erase(name.length()-5,name.length())
 			processStampLibrary(name, path+file)
 	dir.list_dir_end()

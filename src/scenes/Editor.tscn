@@ -35,7 +35,6 @@ script = ExtResource( 1 )
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 editor/display_folded = true
-visible = false
 anchor_bottom = 1.0
 margin_right = 126.0
 rect_min_size = Vector2( 126, 10 )
@@ -169,12 +168,91 @@ margin_bottom = 1152.0
 texture = ExtResource( 2 )
 
 [node name="PanelContainer2" type="PanelContainer" parent="CanvasLayer"]
+editor/display_folded = true
 visible = false
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 126.0
-margin_top = -224.0
+margin_top = -225.0
+margin_bottom = -1.0
+
+[node name="GridContainer2" type="GridContainer" parent="CanvasLayer/PanelContainer2"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 891.0
+margin_bottom = 217.0
+
+[node name="LabelCont" type="GridContainer" parent="CanvasLayer/PanelContainer2/GridContainer2"]
+margin_right = 884.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+size_flags_horizontal = 3
+columns = 3
+
+[node name="pattern" type="Label" parent="CanvasLayer/PanelContainer2/GridContainer2/LabelCont"]
+margin_right = 100.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 100, 0 )
+text = "Pattern"
+align = 2
+
+[node name="stamp" type="Label" parent="CanvasLayer/PanelContainer2/GridContainer2/LabelCont"]
+margin_left = 104.0
+margin_right = 354.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 250, 0 )
+text = "Stamp"
+align = 2
+
+[node name="options" type="Label" parent="CanvasLayer/PanelContainer2/GridContainer2/LabelCont"]
+margin_left = 358.0
+margin_right = 884.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "options"
+align = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer2/GridContainer2"]
+margin_top = 36.0
+margin_right = 884.0
+margin_bottom = 210.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/PanelContainer2/GridContainer2/GridContainer"]
+margin_right = 440.0
+margin_bottom = 174.0
+rect_min_size = Vector2( 58, 58 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="pattern" type="TextureRect" parent="CanvasLayer/PanelContainer2/GridContainer2/GridContainer/GridContainer"]
+margin_right = 218.0
+margin_bottom = 174.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 5
+
+[node name="stamp" type="TextureRect" parent="CanvasLayer/PanelContainer2/GridContainer2/GridContainer/GridContainer"]
+margin_left = 222.0
+margin_right = 440.0
+margin_bottom = 174.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+stretch_mode = 5
+
+[node name="GridContainer2" type="GridContainer" parent="CanvasLayer/PanelContainer2/GridContainer2/GridContainer"]
+margin_left = 444.0
+margin_right = 884.0
+margin_bottom = 174.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
 
 [node name="MapPanel" type="PanelContainer" parent="CanvasLayer"]
 anchor_left = 1.0
