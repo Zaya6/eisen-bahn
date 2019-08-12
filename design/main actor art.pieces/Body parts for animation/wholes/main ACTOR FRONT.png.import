@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile red orange1.png-82e109e8cdf81891bf4e5bef4af5b650.stex"
+path="res://.import/main ACTOR FRONT.png-f0540c938fcaef57f12669898de7bbeb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/level tilesets/seperate tiles/tile red orange1.png"
-dest_files=[ "res://.import/tile red orange1.png-82e109e8cdf81891bf4e5bef4af5b650.stex" ]
+source_file="res://design/main actor art.pieces/Body parts for animation/wholes/main ACTOR FRONT.png"
+dest_files=[ "res://.import/main ACTOR FRONT.png-f0540c938fcaef57f12669898de7bbeb.stex" ]
 
 [params]
 

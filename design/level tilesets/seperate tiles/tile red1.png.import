@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile red1.png-22bc25d41a4b6e06377711ff031c0e99.stex"
+path="res://.import/tile red1.png-4e2e257e57d238241b81067b03f0efc2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/floor_tiles/tile red1.png"
-dest_files=[ "res://.import/tile red1.png-22bc25d41a4b6e06377711ff031c0e99.stex" ]
+source_file="res://design/level tilesets/seperate tiles/tile red1.png"
+dest_files=[ "res://.import/tile red1.png-4e2e257e57d238241b81067b03f0efc2.stex" ]
 
 [params]
 

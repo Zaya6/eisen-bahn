@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile blue grn2.png-d463ffb52efe9c921c964ad69f57208b.stex"
+path="res://.import/tile blue grn2.png-972cdd4215a038948366adf4c473093e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/floor_tiles/tile blue grn2.png"
-dest_files=[ "res://.import/tile blue grn2.png-d463ffb52efe9c921c964ad69f57208b.stex" ]
+source_file="res://design/level tilesets/seperate tiles/tile blue grn2.png"
+dest_files=[ "res://.import/tile blue grn2.png-972cdd4215a038948366adf4c473093e.stex" ]
 
 [params]
 

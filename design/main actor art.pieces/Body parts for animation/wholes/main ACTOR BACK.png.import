@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RU leg.png-7fa8c15392d18d3abbf7e0be5abe8b29.stex"
+path="res://.import/main ACTOR BACK.png-74430fe50a0925b8ba09f2a3488688b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/RU leg.png"
-dest_files=[ "res://.import/RU leg.png-7fa8c15392d18d3abbf7e0be5abe8b29.stex" ]
+source_file="res://design/main actor art.pieces/Body parts for animation/wholes/main ACTOR BACK.png"
+dest_files=[ "res://.import/main ACTOR BACK.png-74430fe50a0925b8ba09f2a3488688b0.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

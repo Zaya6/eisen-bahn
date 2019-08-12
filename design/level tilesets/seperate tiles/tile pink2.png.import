@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tile pink2.png-fdcaf986d3f09773b918fdce1ddc5a56.stex"
+path="res://.import/tile pink2.png-c0b285231597e959806cef4de5b86c8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/floor_tiles/tile pink2.png"
-dest_files=[ "res://.import/tile pink2.png-fdcaf986d3f09773b918fdce1ddc5a56.stex" ]
+source_file="res://design/level tilesets/seperate tiles/tile pink2.png"
+dest_files=[ "res://.import/tile pink2.png-c0b285231597e959806cef4de5b86c8f.stex" ]
 
 [params]
 

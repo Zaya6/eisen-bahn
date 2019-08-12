@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LL leg.png-cd848b3ac02a02340742e170fc7acf0d.stex"
+path="res://.import/stage 1 test tileset.png-92491f60dd8b025dbce51d23ce944106.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/LL leg.png"
-dest_files=[ "res://.import/LL leg.png-cd848b3ac02a02340742e170fc7acf0d.stex" ]
+source_file="res://design/level tilesets/whole level tilesets/stage 1 test tileset.png"
+dest_files=[ "res://.import/stage 1 test tileset.png-92491f60dd8b025dbce51d23ce944106.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

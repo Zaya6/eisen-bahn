@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Neck.png-4936d397e521b6e2813bfc9113f24ded.stex"
+path="res://.import/stage 1 test tileset.png-744fd827ab971d1b71a472a218995a0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/Neck.png"
-dest_files=[ "res://.import/Neck.png-4936d397e521b6e2813bfc9113f24ded.stex" ]
+source_file="res://src/tiles/stage 1 test tileset.png"
+dest_files=[ "res://.import/stage 1 test tileset.png-744fd827ab971d1b71a472a218995a0c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
