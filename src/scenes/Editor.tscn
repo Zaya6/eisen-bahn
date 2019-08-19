@@ -1,10 +1,25 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://src/scenes/Editor.gd" type="Script" id=1]
 [ext_resource path="res://src/test/test_art/RedCarpet_N.jpg" type="Texture" id=2]
 [ext_resource path="res://src/test/test_art/light.png" type="Texture" id=3]
 [ext_resource path="res://src/ControlCam.gd" type="Script" id=4]
 [ext_resource path="res://src/tiles/TilesTest1.png" type="Texture" id=5]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/Neck.png" type="Texture" id=6]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/Head.png" type="Texture" id=7]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/LU arm.png" type="Texture" id=8]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/RL arm.png" type="Texture" id=9]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/RU leg.png" type="Texture" id=10]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/LU leg.png" type="Texture" id=11]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/RU arm.png" type="Texture" id=12]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/LL leg.png" type="Texture" id=13]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/LL arm.png" type="Texture" id=14]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/U torso.png" type="Texture" id=15]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/L torso.png" type="Texture" id=16]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/RL leg.png" type="Texture" id=17]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/R foot.png" type="Texture" id=18]
+[ext_resource path="res://design/item-art/main actor art.pieces/Body parts for animation/body parts/L foot.png" type="Texture" id=19]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "TilesTest1.png 0"
@@ -284,3 +299,59 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -65540, 0, 0, -65539, 0, 0, -131046, 0, 0, -131045, 0, 0, -4, 0, 0, -3, 0, 0, -65510, 0, 0, -65509, 0, 0, 1572860, 0, 0, 1572861, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1638396, 0, 0, 1638397, 0, 0, 1572890, 0, 0, 1572891, 0, 0 )
+
+[node name="Neck" type="Sprite" parent="."]
+position = Vector2( 416.327, 343.979 )
+texture = ExtResource( 6 )
+
+[node name="Head" type="Sprite" parent="."]
+position = Vector2( 416.412, 338.011 )
+texture = ExtResource( 7 )
+
+[node name="LU arm" type="Sprite" parent="."]
+position = Vector2( 425.909, 347.484 )
+texture = ExtResource( 8 )
+
+[node name="RL arm" type="Sprite" parent="."]
+position = Vector2( 408.947, 357.297 )
+texture = ExtResource( 9 )
+
+[node name="RU leg" type="Sprite" parent="."]
+position = Vector2( 412.946, 358.969 )
+texture = ExtResource( 10 )
+
+[node name="LU leg" type="Sprite" parent="."]
+position = Vector2( 421.147, 360.957 )
+texture = ExtResource( 11 )
+
+[node name="RU arm" type="Sprite" parent="."]
+position = Vector2( 408.954, 351.352 )
+texture = ExtResource( 12 )
+
+[node name="LL leg" type="Sprite" parent="."]
+position = Vector2( 419.202, 372.776 )
+texture = ExtResource( 13 )
+
+[node name="LL arm" type="Sprite" parent="."]
+position = Vector2( 424.893, 357.4 )
+texture = ExtResource( 14 )
+
+[node name="U torso" type="Sprite" parent="."]
+position = Vector2( 416.923, 346.838 )
+texture = ExtResource( 15 )
+
+[node name="L torso" type="Sprite" parent="."]
+position = Vector2( 417, 354 )
+texture = ExtResource( 16 )
+
+[node name="RL leg" type="Sprite" parent="."]
+position = Vector2( 412.576, 373.819 )
+texture = ExtResource( 17 )
+
+[node name="R foot" type="Sprite" parent="."]
+position = Vector2( 413.599, 379.531 )
+texture = ExtResource( 18 )
+
+[node name="L foot" type="Sprite" parent="."]
+position = Vector2( 424.085, 379.446 )
+texture = ExtResource( 19 )
