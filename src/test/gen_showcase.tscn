@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/test/gen_showcase.gd" type="Script" id=1]
-[ext_resource path="res://src/tiles/tileblack.png" type="Texture" id=2]
-[ext_resource path="res://src/tiles/tile red1.png" type="Texture" id=3]
+[ext_resource path="res://src/art/tiles/tileblack.png" type="Texture" id=2]
+[ext_resource path="res://src/art/tiles/tile red1.png" type="Texture" id=3]
 [ext_resource path="res://src/test/ControlCam.gd" type="Script" id=4]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )

@@ -16,17 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Eisen Bahn"
-run/main_scene="res://src/scenes/Editor.tscn"
+run/main_scene="res://src/stamps/BaseStampEditor.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
 
-Tiles="*res://src/Tiles.gd"
-TrainGen="*res://src/TrainGen.gd"
-Stamps="*res://src/Stamps.gd"
-PMG="*res://PMG.gd"
-Patterns="*res://src/Patterns.gd"
+EB="*res://src/EB.gd"
 
 [display]
 
