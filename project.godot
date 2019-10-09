@@ -8,21 +8,36 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Entity",
+"language": "GDScript",
+"path": "res://src/obj/Entity.gd"
+}, {
+"base": "Reference",
+"class": "TileMatcher",
+"language": "GDScript",
+"path": "res://src/obj/gen/TileMatcher.gd"
+} ]
 _global_script_class_icons={
-
+"Entity": "",
+"TileMatcher": ""
 }
 
 [application]
 
 config/name="Eisen Bahn"
-run/main_scene="res://src/stamps/BaseStampEditor.tscn"
+run/main_scene="res://src/levels/traincar_test.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
 
 EB="*res://src/EB.gd"
+
+[debug]
+
+settings/fps/force_fps=120
 
 [display]
 

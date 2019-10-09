@@ -6,27 +6,29 @@
 
 [node name="StampEditor" type="Node"]
 script = ExtResource( 1 )
-StampLibraryPath = "res://src/stamps/libraries/room_test.json"
-stampName = "top"
+StampLibraryPath = "res://src/stamps/libraries/train_test.json"
+stampName = "walls_grow"
+Probability = Vector2( 5, 20 )
 limitSpawns = 1
 
 [node name="Pattern" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 65536, 4, 0, 65537, 4, 0 )
+tile_data = PoolIntArray( 0, -2, 0, 9, -2, 0, 65536, -2, 0, 65545, -2, 0, 131072, 3, 0, 131081, 4, 0 )
 script = ExtResource( 3 )
-width = 2
-height = 2
+width = 10
+height = 3
 
 [node name="Stamp" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0 )
+tile_data = PoolIntArray( 0, 3, 0, 9, 4, 0, 65536, 3, 0, 65545, 4, 0, 131072, 3, 0, 131081, 4, 0 )
 script = ExtResource( 3 )
 lineColor = Color( 0.00784314, 0, 1, 0.6 )
-width = 2
-height = 2
+width = 10
+height = 3
 
 [node name="Objects" type="Node2D" parent="Stamp"]

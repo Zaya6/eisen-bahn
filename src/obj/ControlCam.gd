@@ -1,32 +1,35 @@
 extends Camera2D
 
-var nzoom = 1
-var zoomTarget = 1
+export(float) var setZoom = 1
+
+var nzoom = setZoom
+var zoomTarget = setZoom
 var move = Vector2(0.0, 0.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	seed(555555)
+	zoomTarget = zoom.x
+	nzoom = zoom.x
 	set_process(true)
 
 func _process(delta):
 	if Input.is_action_pressed("ui_page_up"):
-		zoomTarget -=0.05
+		zoomTarget -= 0.05
 	if Input.is_action_pressed("ui_page_down"):
-		zoomTarget +=0.05
+		zoomTarget += 0.05
 	
 	if Input.is_action_pressed("ui_up"):
-		move.y -= int(50 * delta)
+		move.y -= (50 + move.y * 0.1) * delta
 	if Input.is_action_pressed("ui_down"):
-		move.y += int(50 * delta)
+		move.y += (50 + move.y * 0.1) * delta
 	if Input.is_action_pressed("ui_right"):
-		move.x += int(50 * delta)
+		move.x += (50 + move.y * 0.1) * delta
 	if Input.is_action_pressed("ui_left"):
-		move.x -= int(50 * delta)
+		move.x -= 50 * delta
 	
 	offset += move
 	move *= 0.9
 	
-	nzoom = lerp(nzoom, zoomTarget, 0.05)
+	nzoom = lerp(nzoom, zoomTarget, 0.1)
 	zoom = Vector2(nzoom, nzoom)
 	

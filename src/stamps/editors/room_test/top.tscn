@@ -14,19 +14,19 @@ limitSpawns = 1
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 65536, 4, 0, 65537, 4, 0 )
+tile_data = PoolIntArray( 131072, 0, 0, 131073, 1, 0, 131074, 2, 0 )
 script = ExtResource( 3 )
-width = 2
-height = 2
+width = 3
+height = 3
 
 [node name="Stamp" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0 )
+tile_data = PoolIntArray( 1, 21, 0, 65537, 21, 0, 131073, 25, 0 )
 script = ExtResource( 3 )
 lineColor = Color( 0.00784314, 0, 1, 0.6 )
-width = 2
-height = 2
+width = 3
+height = 3
 
 [node name="Objects" type="Node2D" parent="Stamp"]

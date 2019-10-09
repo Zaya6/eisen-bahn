@@ -6,27 +6,28 @@
 
 [node name="StampEditor" type="Node"]
 script = ExtResource( 1 )
-StampLibraryPath = "res://src/stamps/libraries/room_test.json"
-stampName = "top"
+StampLibraryPath = "res://src/stamps/libraries/Nemos.json"
+stampName = "2nd"
+Probability = Vector2( 1, 2 )
 limitSpawns = 1
 
 [node name="Pattern" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 65536, 4, 0, 65537, 4, 0 )
+tile_data = PoolIntArray( 65536, 0, 0, 65537, 1, 0, 65538, 1, 0, 65539, 2, 0 )
 script = ExtResource( 3 )
-width = 2
+width = 4
 height = 2
 
 [node name="Stamp" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0 )
+tile_data = PoolIntArray( -196608, 10, 0, -196607, 11, 0, -196606, 9, 0, -196605, 10, 0, -131071, 13, 0, -131070, 12, 0, -65535, 13, 0, -65534, 12, 0, 1, 13, 0, 2, 12, 0, 65537, 16, 0, 65538, 14, 0 )
 script = ExtResource( 3 )
 lineColor = Color( 0.00784314, 0, 1, 0.6 )
-width = 2
+width = 3
 height = 2
 
 [node name="Objects" type="Node2D" parent="Stamp"]

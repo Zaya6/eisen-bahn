@@ -28,24 +28,34 @@ func saveStamp():
 	var stamp = $Stamp
 	
 	for pos in pattern.get_used_cells():
-		pKey.append([int(pos.x),int(pos.y),pattern.get_cellv(pos)])
+		var cell = pattern.get_cellv(pos)
+		if cell == -2: cell = -1
+		pKey.append([int(pos.x),int(pos.y),cell])
 	for pos in stamp.get_used_cells():
-		sKey.append([int(pos.x),int(pos.y),stamp.get_cellv(pos)])
+		var cell = stamp.get_cellv(pos)
+		if cell == -2: cell = -1
+		sKey.append([int(pos.x),int(pos.y),cell])
 	
 	stampData = {
 		name = stampName,
 		pattern_key = pKey,
 		stamp_key = sKey,
+		pattern_width = pattern.width,
+		pattern_height = pattern.height,
+		stamp_width = stamp.width,
+		stamp_height = stamp.height,
 		prob = [Probability.x,Probability.y],
 		limit = limitSpawns,
-		rotate = rotation
+		totalSpawns = 0,
+		rotate = rotation,
+		lastSeed = 0
 		}
 	print("storing stamp data")
 	
 	writeToFile()
 
 func writeToFile():
-	var library = {}
+	var library = []
 	var file = File.new()
 	
 	#check if the library already exists
@@ -56,8 +66,14 @@ func writeToFile():
 		file.close()
 	
 	file.open(StampLibraryPath, file.WRITE)
-	library[stampName] = stampData
+	library = replace(library, stampData)
 	file.store_string(to_json(library))
 	file.close()
 	print("stamp saved")
-	
+
+func replace(array, data):
+	var newArray = [data]
+	for value in array:
+		if value["name"] != data["name"]:
+			newArray.push_back(value)
+	return newArray

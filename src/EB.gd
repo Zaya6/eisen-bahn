@@ -1,12 +1,14 @@
 extends Node
 
+# A singleton class that holds information used between scenes
+
 var stampLibraries = {}
 
 func _init():
 	#start loading libraries at start
 	loadStampLibrary()
 
-func loadStampLibrary(path="res://src/stamps/libraries"):
+func loadStampLibrary(path="res://src/stamps/libraries/"):
 	var dir = Directory.new()
 	var libraries = {}
 	dir.open(path)

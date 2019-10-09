@@ -7,26 +7,26 @@
 [node name="StampEditor" type="Node"]
 script = ExtResource( 1 )
 StampLibraryPath = "res://src/stamps/libraries/room_test.json"
-stampName = "top"
+stampName = "bottom_grow"
 limitSpawns = 1
 
 [node name="Pattern" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 65536, 4, 0, 65537, 4, 0 )
+tile_data = PoolIntArray( 0, 21, 0, 65536, 21, 0 )
 script = ExtResource( 3 )
-width = 2
-height = 2
+width = 1
+height = 3
 
 [node name="Stamp" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0 )
+tile_data = PoolIntArray( 131072, 21, 0 )
 script = ExtResource( 3 )
 lineColor = Color( 0.00784314, 0, 1, 0.6 )
-width = 2
-height = 2
+width = 1
+height = 3
 
 [node name="Objects" type="Node2D" parent="Stamp"]

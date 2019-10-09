@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/levels/traincar_test.gd" type="Script" id=1]
+[ext_resource path="res://src/art/tiles/TestTileset.tres" type="TileSet" id=2]
+[ext_resource path="res://src/obj/ControlCam.gd" type="Script" id=3]
+[ext_resource path="res://src/obj/ui/LevelEditorUI.gd" type="Script" id=4]
+
+[node name="traincar_test" type="Node2D"]
+
+[node name="level" type="Node2D" parent="."]
+script = ExtResource( 1 )
+randomSeed = true
+seedLabel = NodePath("../CanvasLayer/Control/hSplit/Label")
+
+[node name="TileMap" type="TileMap" parent="level"]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 655363, 3, 0, 655372, 4, 0, 720899, 6, 0, 720900, 7, 0, 720901, 7, 0, 720902, 7, 0, 720903, 7, 0, 720904, 7, 0, 720905, 7, 0, 720906, 7, 0, 720907, 7, 0, 720908, 8, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 516.66, 391.895 )
+current = true
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+Level = NodePath("../../level")
+
+[node name="hSplit" type="HSplitContainer" parent="CanvasLayer/Control"]
+margin_right = 120.0
+margin_bottom = 25.0
+
+[node name="RegenButton" type="Button" parent="CanvasLayer/Control/hSplit"]
+margin_right = 84.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 25, 0 )
+text = "Regenerate"
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/hSplit"]
+margin_left = 96.0
+margin_top = 5.0
+margin_right = 120.0
+margin_bottom = 19.0
+[connection signal="pressed" from="CanvasLayer/Control/hSplit/RegenButton" to="CanvasLayer/Control" method="_on_RegenButton_pressed"]

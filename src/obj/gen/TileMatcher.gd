@@ -1,103 +1,96 @@
-extends Node
+# x = index % width
+# y = index / width
+# index = y * width + x
 
-# x = index % size
-# y = index / size
-# index = y * size + x
+class_name TileMatcher
+
+#internal variables
+var baseTilemap:TileMap
+var stampTilemap:TileMap
+var library:Array
+var tilesPlaced:Dictionary
+
+func _init(ntilemap:TileMap, nlibrary:Array,nstampTilemap:TileMap=null):
+	baseTilemap = ntilemap
+	library = nlibrary
+	
+	# Allow to pass a seperate tilemap to stamp onto, so 
+	# things can be added to a level but on another layer
+	#, possible maybe to use for object spawning by creating a faux tilemap
+	if nstampTilemap == null: stampTilemap = baseTilemap
 
 func _ready():
 	pass
 
+# TODO: Add ability to pass a different tilemap to stamp to.
 
 #it's faster to loop through the layout once and 
 #then loop through each stamp instead of the other way around
-func tileMatch(library):
-	var pos
-	var stageUnlock
-	var stamp 
-	var pattern
-	var unlock
-	var stampSizeX
-	var stampSizeY
-	var checkPos
-	var matchSucess
+func generate():
+	var die: int = randi()%10
+	var cover:Rect2 = baseTilemap.get_used_rect()
+	var usedCells = baseTilemap.get_used_cells()
+	usedCells.push_back(Vector2(0,0))
+	var cell:Vector2
+	var x:int; var y:int
+	var i: int = 0 if die < 5 else usedCells.size() -1
+	var loopiter:int = 1 if die < 5 else -1
+	# second indentation
+	var stamp
+	var prob:PoolIntArray
+	var patternWidth:int
+	var patternHeight:int
+	var patternKey:Array
+	var patternArea: int
+	var patternSize: int
+	var j:int = 0
+	# third indentation
+	var unlock:int
+	var checkX:int
+	var checkY:int
+	var matchFound:bool = false
 	
-	var i = 0
-	var matchFound = false
-	var coverCheck = sizeX*sizeY
-	while i < sizeX*sizeY:
-		pos = indexToXY(i)
+	while i < usedCells.size() and i > -1:
+		cell = usedCells[i]
+		x = cell.x
+		y = cell.y
 		
-		for stampName in library:
-			stamp = library[stampName]
-			
+		for stamp in library:
 			#check first if it succeeds
-			if rand_range(0,1) > float(stamp["matchSuccess"]): continue
-			pattern = stamp["pattern"]
-			unlock = pattern.size()
-			stampSizeX = int(stamp["sizeX"])
-			stampSizeY = int(stamp["sizeY"])
-			checkPos = Vect.new()
+			prob = stamp["prob"]
+			if rand_range(0,prob[1]) > prob[0]:
+				continue
 			
-			#loop through stamp pattern, reuse unlock because it is size of pattern
-			for j in range(unlock):
-				checkPos.x = pos.x + j%stampSizeX
-				checkPos.y = pos.y + j/stampSizeY
-				if checkPos.x < sizeX and checkPos.y < sizeY:
-					if getTile(checkPos.x,checkPos.y) == pattern[j]: #compare tiles with pattern to match
-						unlock -= 1 #unlock keeps track of number of matched tiles
+			patternWidth = int(stamp["pattern_width"])
+			patternHeight = stamp["pattern_height"]
+			patternArea = patternWidth * patternHeight
+			patternKey = stamp["pattern_key"]
+			patternSize = patternKey.size()
+			j = 0
+			while j < patternArea:
+				unlock = patternSize
+				checkX = x - j % patternWidth 
+				checkY = y - j / patternWidth 
+				for key in patternKey:
+					if baseTilemap.get_cell( checkX + key[0], checkY + key[1] ) == key[2]:
+						unlock -= 1
 					else:
 						break
-			if unlock <= 0:
-				placeStamp(pos.x, pos.y, stamp["stamp"], stampSizeX, stampSizeX )
-				coverCheck -= 2
-				matchFound = true
-			yield()
-		i += 1
-		if i >= sizeX*sizeY:
-			if matchFound or coverCheck > sizeX*sizeY*0.2:
-				print(str(coverCheck) + ":" + str(sizeX*sizeY*0.2))
-				matchFound = false
-				i = 0
-			else:
-				break
-	finishedGenerating = true
-	print("done")
+				
+				if unlock <= 0:
+					pressStamp(stamp["stamp_key"],checkX, checkY)
+					matchFound = true
+					break
+					
+				j+=1
+		i += loopiter
+	
+	# return relevant data to determine if generation should continue or stop
+	return [ stampTilemap.get_used_rect(), tilesPlaced, matchFound ]
 
-func placeStamp(x, y, stamp, stampSizeX, stampSizeY ):
-	# in order to place it correctly we must combine the xy give
-	# with the xy of the stamp and then turn it back int an index
-	# to place it within the layout
-	for i in range(stamp.size()):
-		setTile(x + i%stampSizeX, y + i/stampSizeY, stamp[i])
 
-func printStamp(stamp, size):
-	var y = 0
-	while y < size:
-		var row = ""
-		for x in range(size):
-			var i = size*y+x
-			var stmp = str(stamp[i])
-			var sp = "   "
-			sp.erase(0, stmp.length()-1)
-			row += sp + stmp
-		y += 1
-		print(row)
-
-func setTile(x:int, y:int, tile:int):
-	layout[ y * sizeX + x] = tile
-
-func getTile(x:int, y:int):
-	return layout[ y * sizeX + x]
-
-func indexToXY(i):
-	return Vect.new(i%sizeX,i/sizeY)
-
-func getLayout():
-	return layout
-
-class Vect:
-	var x:int = 0
-	var y:int = 0
-	func _init(nx:int=0,ny:int=0):
-		x = nx
-		y = ny
+func pressStamp(stampKey, x, y):
+	for key in stampKey:
+		stampTilemap.set_cell(x+key[0], y+key[1], key[2])
+#		tilesPlaced[str(stampTilemap.get_cell(x+key[0], y+key[1]))] = false
+		tilesPlaced[str(key[2])] = true
