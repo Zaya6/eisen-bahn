@@ -6,24 +6,18 @@ export(int) var spawnSeed = 11111
 export(bool) var randomSeed = false
 export(NodePath) var seedLabel
 
-# stamp libraries
-var library1Name = ""
-var library2Name = ""
-var library3Name = ""
-var library1:Array
-var library2:Array
-var library3:Array
+# stamp libraries and matchers
+var libraryNames = ["train_test","train_test","train_test"]
+var libraries:Array
+var stageMatchers: Array 
 
-# Tile match generators
-var stage1Matcher: TileMatcher
-var stage2Matcher: TileMatcher
-var stage3Matcher: TileMatcher
 
 #internal variables
 var tilemap:TileMap
 var stage : int = 0
 var clock:float = 0
 var done: bool = false
+var currentMatcher: TileMatcher
 
 func _ready():
 	# get tilemap object
@@ -36,29 +30,36 @@ func _ready():
 	seed(spawnSeed)
 	
 	# load libraries
-	library1 = EB.stampLibraries[library1Name]
-	library2 = EB.stampLibraries[library2Name]
-	library3 = EB.stampLibraries[library3Name]
+	libraries.push_back( EB.stampLibraries[libraryNames[0]])
+	libraries.push_back( EB.stampLibraries[libraryNames[1]])
+	libraries.push_back( EB.stampLibraries[libraryNames[2]])
 	
-	stage1Matcher = TileMatcher.new(tilemap,library1)
-	stage2Matcher = TileMatcher.new(tilemap,library2)
-	stage3Matcher = TileMatcher.new(tilemap,library3)
+	#set up tile match generators
+	stageMatchers.push_back( TileMatcher.new(tilemap,libraries[0]))
+	stageMatchers.push_back( TileMatcher.new(tilemap,libraries[1]))
+	stageMatchers.push_back( TileMatcher.new(tilemap,libraries[2]))
+	print(TileMatcher.new(tilemap,libraries[0]))
 
 func _process(delta):
-	var matcher = stage1Matcher
+	var matcher = stageMatchers[stage]
+#	print(matcher)
 	
-	clock += delta
-	if clock > spawnPerSecond and not done:
-
-		var i = 0
-		while i < loopsPerUpdate:
-			var genCheck = matcher.generate()
-			if genCheck[0].size.y > 50:#not genCheck[2]:
-				done = true
-				print("Done yeeting")
-				
-			clock = 0
-			i += 1
+#	clock += delta
+#	if clock > spawnPerSecond and not done:
+#
+#		var i = 0
+#		while i < loopsPerUpdate:
+#			#gencheck stores array with data on generation
+#			var genCheck = matcher.generate()
+#
+#			if not genCheck[2]:
+#				stage += 1
+#				if stage > 0: #end on specific stage
+#					done = true
+#					print("Done yeeting")
+#
+#			clock = 0
+#			i += 1
 	
 	#enter to  reload scene and regenerate
 	if Input.is_action_just_pressed("ui_accept"):
