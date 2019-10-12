@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Obj/Editors/StampEditor.gd" type="Script" id=1]
+[ext_resource path="res://src/art/tiles/TestTileset.tres" type="TileSet" id=2]
+[ext_resource path="res://src/Obj/Editors/TileEditor.gd" type="Script" id=3]
+
+[node name="StampEditor" type="Node"]
+script = ExtResource( 1 )
+StampLibraryPath = "res://src/stamps/libraries/train_test_2.json"
+stampName = "reseed_car"
+limitSpawns = 1
+
+[node name="Pattern" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( 65536, -2, 0, 65537, -2, 0, 65538, -2, 0, 65539, -2, 0, 65540, -2, 0, 65541, -2, 0, 65542, -2, 0, 65543, -2, 0, 65544, -2, 0, 65545, -2, 0, 131072, 3, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 4, 0 )
+script = ExtResource( 3 )
+width = 10
+height = 3
+
+[node name="Stamp" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -65536, 3, 0, -65527, 4, 0, 0, 3, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 4, 0, 65536, 6, 0, 65537, 7, 0, 65538, 7, 0, 65539, 10, 0, 65540, 1, 0, 65541, 1, 0, 65542, 9, 0, 65543, 7, 0, 65544, 7, 0, 65545, 8, 0, 131072, 26, 0, 131073, 27, 0, 131074, 27, 0, 131075, 12, 0, 131076, 1, 0, 131077, 1, 0, 131078, 5, 0, 131079, 27, 0, 131080, 27, 0, 131081, 2, 0 )
+script = ExtResource( 3 )
+lineColor = Color( 0.00784314, 0, 1, 0.6 )
+width = 10
+height = 3
+
+[node name="Objects" type="Node2D" parent="Stamp"]

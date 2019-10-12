@@ -8,7 +8,6 @@
 script = ExtResource( 1 )
 StampLibraryPath = "res://src/stamps/libraries/train_test.json"
 stampName = "walls_grow"
-Probability = Vector2( 5, 20 )
 limitSpawns = 1
 
 [node name="Pattern" type="TileMap" parent="."]
@@ -21,11 +20,10 @@ width = 10
 height = 3
 
 [node name="Stamp" type="TileMap" parent="."]
-visible = false
 tile_set = ExtResource( 2 )
 cell_y_sort = true
 format = 1
-tile_data = PoolIntArray( 0, 3, 0, 9, 4, 0, 65536, 3, 0, 65545, 4, 0, 131072, 3, 0, 131081, 4, 0 )
+tile_data = PoolIntArray( 0, 3, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 4, 0, 65536, 3, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 4, 0, 131072, 3, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 4, 0 )
 script = ExtResource( 3 )
 lineColor = Color( 0.00784314, 0, 1, 0.6 )
 width = 10
